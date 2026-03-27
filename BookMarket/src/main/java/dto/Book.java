@@ -17,6 +17,10 @@ public class Book implements Serializable{
 	private String releaseDate;
 	private String condition;
 
+	public Book(){
+		super();
+	}
+	
 	public Book(String bookId, String name, Integer unitPrice) {
 		this.bookId=bookId;
 		this.name=name;
