@@ -16,6 +16,15 @@ public class Book implements Serializable{
 	private long unitsInStock;
 	private String releaseDate;
 	private String condition;
+	private String filename;
+	
+	public String getFilename() {
+		return filename;
+	}
+	
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 
 	public Book(){
 		super();

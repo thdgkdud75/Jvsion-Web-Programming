@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <html>
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 <title>도서 등록</title>
 </head>
 
@@ -9,7 +9,6 @@
 <div class="container py-4">
 
     <%@ include file="menu.jsp" %>
-
     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">도서 등록</h1>
@@ -18,8 +17,7 @@
     </div>
 
     <div class="row align-items-md-stretch">
-        <form name="newBook" action="./processAddBook.jsp" method="post">
-
+    	<form name="newBook" action="./processAddBook.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
             <div class="mb-3 row">
                 <label class="col-sm-2">도서코드</label>
                 <div class="col-sm-3">
@@ -92,13 +90,17 @@
                     <input type="radio" name="condition" value="EBook"> E-Book
                 </div>
             </div>
-
+			<div class ="mb-3 row">
+				<label class="col-sm-2">이미지</label>
+				<div class="col-sm-5">
+					<input type ="file" name="BookImage" class="form-control">
+				</div>
+			</div>
             <div class="mb-3 row">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="submit" class="btn btn-primary" value="등록">
                 </div>
             </div>
-
         </form>
     </div>
 
