@@ -9,14 +9,13 @@
 
 <body>
 <fmt:setLocale value = '<%=request.getParameter("language") %>' />
-<fmt:bundle basename="set.bundle.message">
+<fmt:bundle basename="Bundle.message">
 
 <div class="container py-4">
 <%@ include file="menu.jsp" %>
 
     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
-        
             <h1 class="display-5 fw-bold"><fmt:message key = "title" /></h1>
             <p class="col-md-8 fs-4">Book Addition</p>
         </div>
@@ -24,7 +23,7 @@
 
     <div class="row align-items-md-stretch">
     	<div class = "text-end">
-    	 	<a href = "?language = ko">Korean</a> | <a href = "?language=en">English</a>
+    	 	<a href = "?language=ko">Korean</a> | <a href = "?language=en">English</a>
     	</div>
     	<form name="newBook" action="./processAddBook.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
             <div class="mb-3 row">
